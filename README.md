@@ -4,7 +4,8 @@ We aim to identify the key characteristics of high-performing Airbnb properties 
 
 ## How to Use
 
-1. Run `download_data.ipynb` to download, clean, and export the InsideAirbnb listing data into a `listing.csv` file in this directory. This file will be used for further analysis.
-   - `listing.csv` is not uploaded to the repository and should be downloaded whenever the repository is cloned.
+1. Run `download.ipynb` to download, clean, and export the InsideAirbnb listings data into a `scc_airbnbs.csv` file in this directory. This file will be used for further analysis.
 
-...
+   - `scc_airbnbs.csv` is not uploaded to the repository and must be downloaded whenever the repository is cloned.
+
+2. Work with the downloaded data to create visualizations in `viz.ipynb`.
