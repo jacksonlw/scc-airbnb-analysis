@@ -1,2 +1,9 @@
+# App specifics
 scc_airbnbs.csv
+
+# Environments
 .venv
+.env
+
+# Misc
+.DS_Store
