@@ -31,6 +31,14 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
 p {
   font-size: 1.1rem;
   line-height: 1.5;
@@ -39,7 +47,11 @@ p {
 
 a {
   text-decoration: underline;
-  color: #3326dd;
+  color: #7c24d8;
+}
+
+a:hover {
+  color: #50128e;
 }
 
 .container {
