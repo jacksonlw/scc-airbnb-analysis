@@ -1,7 +1,7 @@
 // Visualization script (with D3JS)
 
 async function loadData() {
-  const data = await d3.csv("/scc_airbnbs.csv");
+  const data = await d3.csv("scc_airbnbs.csv");
 
   // Convert the performance score and price to numbers
   data.forEach((d) => {
