@@ -51,7 +51,7 @@
           </div>
           <div class="data-card">
             <label># of Airbnbs</label>
-            <span>5,709</span>
+            <span>4,600</span>
           </div>
           <div class="data-card">
             <label># of Attributes</label>
@@ -83,13 +83,22 @@
           </div>
 
           <div class="figure">
-            <h3>
-              Relationship Between Price Per Night and Availability of Listings
-              Over the Next Year
-            </h3>
+            <h3>Validating Performance Score Using Price and Availability</h3>
             <p>
-              Need to add legend. Dark hues are lowest perfromance score and
-              lighter hues are the highest scores.
+              This scatter plot is used to validate that our performance score
+              accurately reflects listing success by related price per night to
+              nights available. Each point is a single listing with color
+              representing the performance score (lighter colors = higher
+              scores). Since high-performing listings should have higher prices
+              and be booked more often—lower availability—we expect
+              lighter-colored points to appear in the lower-right region.
+              That&apos;s exactly what the chart shows: listings with lower
+              availability and higher prices are clustered in the bottom-right
+              and are lighter in color, while the darker-colored listings (lower
+              scores) are mostly in the upper-left, where availability is high
+              and price is low. This confirms that our scoring method aligns
+              well with our definition of performance and reflects patterns in
+              the actual data.
             </p>
             <div class="plot">
               <div id="plot-price-score-scatter"></div>
