@@ -11,9 +11,14 @@ body {
   padding: 0;
 }
 
+h1,
+h2,
+h3 {
+  line-height: 1.4;
+}
+
 h1 {
   font-size: 2rem;
-  line-height: 1.4;
   font-weight: 500;
   margin-bottom: 0.75rem;
 }
@@ -21,7 +26,6 @@ h1 {
 h2 {
   font-size: 1.75rem;
   font-weight: 500;
-  line-height: 1.4;
   margin-bottom: 0.5rem;
 }
 
@@ -29,14 +33,13 @@ h3 {
   font-size: 1.5rem;
   font-weight: 500;
   font-style: italic;
-  line-height: 1.4;
   margin-bottom: 0.5rem;
 }
 
 p {
   font-size: 1.1rem;
-  line-height: 1.5;
   margin-bottom: 0.5rem;
+  line-height: 1.5;
 }
 
 a {
@@ -50,7 +53,7 @@ a:hover {
 
 .container {
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem 1rem;
   max-width: 1100px;
 }
 
@@ -62,7 +65,7 @@ a:hover {
   height: 1px;
   width: 100%;
   background-color: lightgrey;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 .data-card-container {
@@ -103,4 +106,10 @@ a:hover {
 
 .figure:not(:last-child) {
   margin-bottom: 3rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .data-card-container {
+    grid-template-columns: 1fr;
+  }
 }
