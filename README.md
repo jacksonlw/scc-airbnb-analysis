@@ -13,3 +13,5 @@ We aim to identify the key characteristics of high-performing Airbnb properties 
    - `scc_airbnbs.csv` is not uploaded to the repository and must be downloaded whenever the repository is cloned.
 
 2. Work with the downloaded data to create visualizations in `viz.ipynb`.
+
+3. Use VSCode LiveServer, or any other web server, to host the `docs` directory. The main webpage is in `index.html`.
