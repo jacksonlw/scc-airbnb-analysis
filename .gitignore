@@ -8,6 +8,3 @@ scc_airbnbs.csv
 # Misc
 .DS_Store
 
-*_chart.html
-*_chart.png
-*_chart.json
