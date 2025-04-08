@@ -3,12 +3,7 @@
 async function loadData() {
   // Check if github pages
 
-  let basePath = "";
-  if (window.location.hostname.includes("github.io")) {
-    basePath += "scc-airbnb-analysis";
-  }
-
-  const data = await d3.csv(`${basePath}/scc_airbnbs.csv`);
+  const data = await d3.csv("./scc_airbnbs.csv");
 
   // Convert the performance score and price to numbers
   data.forEach((d) => {
