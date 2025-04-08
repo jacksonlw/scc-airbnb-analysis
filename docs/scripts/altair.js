@@ -9,3 +9,12 @@ vegaEmbed("#plot-room-type-price", "charts/room_type_vs_price_chart.json")
     // Access the Vega view instance as result.view
   })
   .catch(console.error);
+
+vegaEmbed(
+  "#plot-performance-tier-reviews",
+  "charts/performance_tier_reviews_chart.json"
+)
+  .then(function (result) {
+    // Access the Vega view instance as result.view
+  })
+  .catch(console.error);
