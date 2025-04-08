@@ -11,12 +11,6 @@ body {
   padding: 0;
 }
 
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 1rem 0;
-}
-
 h1 {
   font-size: 2rem;
   line-height: 1.4;
@@ -55,9 +49,9 @@ a:hover {
 }
 
 .container {
-  max-width: 900px;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 1rem;
+  max-width: 1100px;
 }
 
 .subtitle {
@@ -78,9 +72,20 @@ a:hover {
   padding: 1rem 0;
 }
 
+.plot {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f4f8;
+  padding: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
 .data-card {
   border-radius: 1rem;
-  background-color: #f1f4f8;
+  background-color: #f2f4f8;
   padding: 1rem;
 }
 
@@ -94,4 +99,8 @@ a:hover {
   text-align: center;
   font-size: 2.75rem;
   font-weight: 500;
+}
+
+.figure:not(:last-child) {
+  margin-bottom: 3rem;
 }

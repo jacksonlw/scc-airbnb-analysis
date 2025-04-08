@@ -1,16 +1,36 @@
 // Visualization script (with D3JS)
 
-let width = 900,
-  height = 500;
+async function loadData() {
+  const data = await d3.csv("/scc_airbnbs.csv");
 
-let margin = {
-  top: 50,
-  bottom: 50,
-  left: 60,
-  right: 50,
-};
+  // Convert the performance score and price to numbers
+  data.forEach((d) => {
+    d.performance_score = +d.performance_score;
+    d.price = +d.price;
+    d.accommodates = +d.accommodates;
+    d.bathrooms = +d.bathrooms;
+    d.bedrooms = +d.bedrooms;
+    d.beds = +d.beds;
+    d.availability_365 = +d.availability_365;
+    d.amenities = JSON.parse(d.amenities);
+  });
+
+  console.log(data);
+
+  return data;
+}
 
 const scatterPlot = (data) => {
+  let width = 1000,
+    height = 600;
+
+  let margin = {
+    top: 50,
+    bottom: 60,
+    left: 75,
+    right: 40,
+  };
+
   let svg = d3
     .select("#plot-price-score-scatter")
     .append("svg")
@@ -70,27 +90,17 @@ const scatterPlot = (data) => {
     .attr("y", 25)
     .attr("transform", "rotate(-90)")
     .attr("text-anchor", "middle");
+
+  svg
+    .append("text")
+    .text(
+      " Relationship Between Price Per Night and Availability of Listings Over the Next Year"
+    )
+    .attr("x", width / 2)
+    .attr("y", 20)
+    .attr("text-anchor", "middle")
+    .attr("style", "font-weight: bold;");
 };
-
-async function loadData() {
-  const data = await d3.csv("../scc_airbnbs.csv");
-
-  // Convert the performance score and price to numbers
-  data.forEach((d) => {
-    d.performance_score = +d.performance_score;
-    d.price = +d.price;
-    d.accommodates = +d.accommodates;
-    d.bathrooms = +d.bathrooms;
-    d.bedrooms = +d.bedrooms;
-    d.beds = +d.beds;
-    d.availability_365 = +d.availability_365;
-    d.amenities = JSON.parse(d.amenities);
-  });
-
-  console.log(data);
-
-  return data;
-}
 
 loadData().then((data) => {
   scatterPlot(data);

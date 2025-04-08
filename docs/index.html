@@ -59,19 +59,32 @@
         </div>
 
         <div class="divider"></div>
-
         <h2>Analysis</h2>
 
-        <div id="plot-price-score-scatter">
-          <h3>
-            Relationship Between Price Per Night and Availability of Listings
-            Over the Next Year
-          </h3>
-          <p>
-            Need to add legend. Dark hues are lowest perfromance score and
-            lighter hues are the highest scores.
-          </p>
+        <div>
+          <div class="figure">
+            <h3>
+              Relationship Between Price Per Night and Availability of Listings
+              Over the Next Year
+            </h3>
+            <p>
+              Need to add legend. Dark hues are lowest perfromance score and
+              lighter hues are the highest scores.
+            </p>
+            <div class="plot">
+              <div id="plot-price-score-scatter"></div>
+            </div>
+          </div>
+
+          <div class="figure">
+            <h3>Performance Score Distribution by Amenity Type</h3>
+            <div class="plot">
+              <div id="plot-amenity-boxplot"></div>
+            </div>
+          </div>
         </div>
+
+        <div class="divider"></div>
 
         <h2>Summary & Findings</h2>
 
@@ -79,8 +92,13 @@
       </div>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
+
     <script src="scripts/index.js"></script>
     <script src="scripts/visualizations.js"></script>
+    <script src="scripts/altair.js"></script>
   </body>
 </html>
