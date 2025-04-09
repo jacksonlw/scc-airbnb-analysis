@@ -2,12 +2,12 @@ Explanation of Visualization Designs
 
 Published Website URL: https://jacksonlw.github.io/scc-airbnb-analysis/
 
-1. Relationship Between Room Type and Price
+1. Relationship Between Room Type and Price (Box Plot)
 
-2. Validating Performance Score Using Price and Availability
+2. Validating Performance Score Using Price and Availability (Scatter Plot)
 
-3. Average Review Ratings by Performance Tier
+3. Average Review Ratings by Performance Tier (Bar Plot)
 
-4. Performance Score Distribution by Amenity Type
+4. Performance Score Distribution by Amenity Type (Box Plot)
 
-5. Airbnb Performance Score Map in the Bay Area
+5. Airbnb Performance Score Map in the Bay Area (Map)
