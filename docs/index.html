@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Airbnb Analysis — Santa Clara County, CA</title>
-    <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
@@ -24,10 +23,10 @@
           We aim to identify the key characteristics of high-performing Airbnb
           properties in Santa Clara County. By analyzing key features like host
           responsiveness, pricing, and more, we hope to discover what makes a
-          listing successful in the area. We aimed to create a variety of visualizations 
-          to illustrate the performance of Airbnb listings within the region. Each 
-          visualization highlights different characteristics that contribute to what 
-          makes an Airbnb high-performing.
+          listing successful in the area. We aimed to create a variety of
+          visualizations to illustrate the performance of Airbnb listings within
+          the region. Each visualization highlights different characteristics
+          that contribute to what makes an Airbnb high-performing.
         </p>
         <br />
         <h2>Data Introduction</h2>
@@ -36,14 +35,15 @@
           provide data and induce advocacy about Airbnb&apos;s impact on
           residential communities. Although the data is already cleaned,
           verified, analyzed, and aggregated, we performed additional data
-          cleaning to ensure we analyzed the data relevant to our hypothesis. We 
-          created a “performance_score” variable to represent the combined effect 
-          of price competitiveness and availability, allowing us to compare listings 
-          within the same room type on a standardized scale. Furthermore, we eliminated 
-          outliers and incomplete entries to guarantee that the dataset was clean, 
-          uniform, and suitable for analysis. The size of the data is 4,600, as we 
-          will be reviewing 4,600 Airbnb listings. The data includes a mix of categorical, 
-          numerical, and continuous values.
+          cleaning to ensure we analyzed the data relevant to our hypothesis. We
+          created a “performance_score” variable to represent the combined
+          effect of price competitiveness and availability, allowing us to
+          compare listings within the same room type on a standardized scale.
+          Furthermore, we eliminated outliers and incomplete entries to
+          guarantee that the dataset was clean, uniform, and suitable for
+          analysis. The size of the data is 4,600, as we will be reviewing 4,600
+          Airbnb listings. The data includes a mix of categorical, numerical,
+          and continuous values.
         </p>
         <div class="data-card-container">
           <div class="data-card">
@@ -68,7 +68,6 @@
 
         <div class="divider"></div>
         <h2>Analysis</h2>
-        <br />
 
         <div>
           <div class="figure">
@@ -84,6 +83,7 @@
               Shared rooms are the most affordable and consistent, clustering
               below $100, appealing to budget-conscious travelers.
             </p>
+
             <div class="plot">
               <div id="plot-room-type-price"></div>
             </div>
@@ -135,6 +135,21 @@
               the trend is clear: better-performing listings correlate with
               higher review scores in all categories.
             </p>
+            <div class="interactive">
+              <div class="interactive-header">
+                <img
+                  src="images/interactive-icon.svg"
+                  class="interactive-icon"
+                />
+                <h4 class="interactive-title">Interactive Visualization</h4>
+              </div>
+              <p class="interactive-description">
+                Click on any bar to highlight that review category across all
+                performance tiers. This lets you easily compare how categories
+                like Cleanliness, Communication, or Check-in are rated for high,
+                medium, and low-performing listings.
+              </p>
+            </div>
             <div class="plot">
               <div id="plot-performance-tier-reviews"></div>
             </div>
@@ -161,6 +176,22 @@
               family-oriented setups—that may help increase a listing&apos;s
               success.
             </p>
+            <div class="interactive">
+              <div class="interactive-header">
+                <img
+                  src="images/interactive-icon.svg"
+                  class="interactive-icon"
+                />
+                <h4 class="interactive-title">Interactive Visualization</h4>
+              </div>
+              <p class="interactive-description">
+                Click on any amenity type on the left to highlight its
+                performance score in the chart. You can select multiple
+                amenities to compare them side by side. Use the room type
+                options at the bottom to filter the data by specific types of
+                listings, like private rooms or entire homes.
+              </p>
+            </div>
             <div class="plot">
               <div id="plot-amenity-boxplot"></div>
             </div>
@@ -191,6 +222,22 @@
               this spatial analysis adds valuable context to our broader
               investigation of what drives Airbnb success.
             </p>
+            <div class="interactive">
+              <div class="interactive-header">
+                <img
+                  src="images/interactive-icon.svg"
+                  class="interactive-icon"
+                />
+                <h4 class="interactive-title">Interactive Visualization</h4>
+              </div>
+              <p class="interactive-description">
+                You can explore the map by clicking and dragging to move around
+                Santa Clara County, California. Use your mouse or trackpad to
+                zoom in and out for a closer look at specific neighborhoods.
+                Hover over individual dots to see listing details like
+                performance score, rating, and number of reviews.
+              </p>
+            </div>
             <div class="plot">
               <iframe
                 src="charts/airbnb_bay_area_explore_map.html"
@@ -206,6 +253,88 @@
         <div class="divider"></div>
 
         <h2>Summary & Findings</h2>
+
+        <p>
+          Through our analysis of Airbnb listings in the Santa Clara county, we
+          aimed to understand which key characteristics would contribute to
+          high-performing properties. By leveraging data from InsideAirbnb, we
+          examined various factors, and identified some key findings.
+        </p>
+
+        <h3>What We Discoverd</h3>
+
+        <p>
+          From our analysis, we discovered: Entire homes/apartments dominate the
+          higher price tiers, which is likely due to travelers looking for a
+          wider range of amenities, privacy, and space. They had the widest
+          price range, with some listings up to $1000 and a median of $200 -
+          300. This is compared to hotel rooms (ranging from $250 - 750),
+          private rooms (under $200), and shared rooms (under $100).
+        </p>
+
+        <p>
+          Performance scores are positively correlated with both higher prices
+          and lower availability, validating our scoring method. High-scoring
+          listings are often more expensive and frequently booked, which was
+          demonstrated in our scatterplot.
+        </p>
+
+        <p>
+          High-performing listings consistently receive better guest reviews,
+          especially in categories like cleanliness, communication, and value.
+          This trend indicates a correlation between performance scores and
+          guest satisfaction.
+        </p>
+
+        <p>
+          Common amenities do not significantly impact performance scores, since
+          the median performance scores for amenities clustered around the 50th
+          percentile. However, amenities like 'Scenic View' and 'Family
+          Friendly' exhibited slightly higher median scores (~55%), indicating a
+          potential positive impact on performance.
+        </p>
+
+        <p>
+          Location matters, as our interactive map demonstrated that higher
+          performing Airbnbs were concentrated in areas with a greater cost of
+          living and affluence, while lower performing Airbnbs were concentrated
+          in the opposite areas.
+        </p>
+
+        <h3>Future Work</h3>
+
+        <p>
+          In the future, we hope to expand our project and test our hypothesis
+          in several different ways. Some next steps could be:
+        </p>
+
+        <p>
+          1. Analyzing Listing Dates- we could explore the impact between the
+          length of time an Airbnb has been listed versus its number of reviews
+          and overall performance score. This could be important for listings
+          that may have less reviews not because they are undesirable options,
+          but rather since they have been listed for less time.
+        </p>
+
+        <p>
+          2. Analyzing Metropolitan Cities- we could compare patterns and test
+          our current findings against urban areas like San Francisco to see if
+          similar factors drive performance or if city-specific dynamics play a
+          larger role.
+        </p>
+
+        <p>
+          3. Integrating Local Attractions- by integrating APIs like Google
+          Maps, we could test to see if popular restaurants or tourist
+          destinations impact pricing or Airbnb success.
+        </p>
+
+        <p>
+          4. Analyzing Seasonality- through time-series data, we could see
+          whether certain times of the year (summer, fire season, tech
+          conferences, winter holidays) impact the availability, pricing,
+          reviews, and overall performance of Airbnbs.
+        </p>
 
         <div id="scatter-plot"></div>
       </div>

@@ -15,25 +15,23 @@ h1,
 h2,
 h3 {
   line-height: 1.2;
+  margin: 1.25rem 0 0.75rem;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 500;
-  margin-bottom: 0.75rem;
 }
 
 h2 {
   font-size: 1.75rem;
   font-weight: 500;
-  margin-bottom: 0.5rem;
 }
 
 h3 {
   font-size: 1.3rem;
   font-weight: 500;
   font-style: italic;
-  margin-bottom: 0.5rem;
 }
 
 p {
@@ -44,11 +42,11 @@ p {
 
 a {
   text-decoration: underline;
-  color: #7c24d8;
+  color: #f30b45;
 }
 
 a:hover {
-  color: #50128e;
+  color: #bd0e3a;
 }
 
 .container {
@@ -118,6 +116,35 @@ a:hover {
 
 .figure:not(:last-child) {
   margin-bottom: 3rem;
+}
+
+.interactive {
+  padding: 1rem;
+  background: rgba(243, 11, 69, 0.1);
+  border-radius: 1rem;
+  color: #f30b45;
+  margin: 1rem 0;
+}
+
+.interactive-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.interactive-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.interactive-title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.interactive-description {
+  padding-left: 3.5rem;
+  margin: 0;
 }
 
 @media only screen and (max-width: 800px) {
