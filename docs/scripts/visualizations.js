@@ -24,13 +24,15 @@ async function loadData() {
 
 const scatterPlot = (data) => {
   let width = 1000,
-    height = 600;
+    height = 700,
+    legendWidth = 400,
+    legendHeight = 20;
 
   let margin = {
-    top: 50,
-    bottom: 60,
+    top: 120,
+    bottom: 50,
     left: 75,
-    right: 40,
+    right: 50,
   };
 
   let svg = d3
@@ -52,20 +54,20 @@ const scatterPlot = (data) => {
     .range([margin.left, width - margin.right]);
 
   //Draw the scale
-  let yaxis = svg
+  svg
     .append("g")
     .call(d3.axisLeft().scale(yscale))
     .attr("transform", `translate(${margin.left} , 0)`);
 
-  let xaxis = svg
+  svg
     .append("g")
     .call(d3.axisBottom().scale(xscale))
     .attr("transform", `translate(0,${height - margin.bottom})`);
 
-  const color = d3.scaleSequential(d3.interpolateViridis);
+  const color = d3.scaleSequential(d3.interpolateYlOrRd);
 
   //Draw the circles
-  let circles = svg
+  svg
     .selectAll("circle")
     .data(data)
     .enter()
@@ -82,7 +84,7 @@ const scatterPlot = (data) => {
     .append("text")
     .text("Price per night (USD)")
     .attr("x", width / 2)
-    .attr("y", height - 15)
+    .attr("y", height - margin.bottom + 40)
     .attr("text-anchor", "middle");
 
   svg
@@ -102,6 +104,48 @@ const scatterPlot = (data) => {
     .attr("y", 20)
     .attr("text-anchor", "middle")
     .attr("style", "font-weight: bold;");
+
+  // Draw the legend
+  let defs = svg.append("defs");
+  let linearGradient = defs
+    .append("linearGradient")
+    .attr("id", "legend-gradient");
+
+  linearGradient
+    .selectAll("stop")
+    .data(d3.range(0, 1, 0.01))
+    .enter()
+    .append("stop")
+    .attr("offset", (d) => `${d * 100}%`)
+    .attr("stop-color", (d) => color(d));
+
+  svg
+    .append("rect")
+    .attr("x", width - margin.right - legendWidth)
+    .attr("y", 60)
+    .attr("width", legendWidth)
+    .attr("height", legendHeight)
+    .style("fill", "url(#legend-gradient)");
+
+  let legendScale = d3.scaleLinear().domain([0, 100]).range([0, legendWidth]);
+
+  let legendAxis = d3.axisBottom(legendScale).ticks(5);
+
+  svg
+    .append("g")
+    .attr("class", "legend axis")
+    .attr(
+      "transform",
+      `translate(${width - margin.right - legendWidth}, ${60 + legendHeight})`
+    )
+    .call(legendAxis);
+
+  svg
+    .append("text")
+    .attr("x", width - margin.right - legendWidth / 2)
+    .attr("y", 50)
+    .attr("text-anchor", "middle")
+    .text("Performance Score");
 };
 
 loadData().then((data) => {

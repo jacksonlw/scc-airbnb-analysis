@@ -82,133 +82,6 @@
 
         <div>
           <div class="figure">
-            <h3>Relationship Between Room Type and Price</h3>
-            <p>
-              The box plot shows that Entire home/apartment listings dominate
-              the higher price range, with many exceeding $1000 and some nearing
-              $2800, and display the widest variation, reflecting diverse
-              property types. Their median price falls between $200 and $300.
-              Hotel rooms have a tighter, more consistent price range, mostly
-              between $250 and $750. Private rooms are typically under $200 but
-              can occasionally reach $1000, indicating a few premium options.
-              Shared rooms are the most affordable and consistent, clustering
-              below $100, appealing to budget-conscious travelers.
-            </p>
-
-            <div class="plot">
-              <div id="plot-room-type-price"></div>
-            </div>
-          </div>
-
-          <div class="figure">
-            <h3>Validating Performance Score Using Price and Availability</h3>
-            <p>
-              This scatter plot is used to validate that our performance score
-              accurately reflects listing success by related price per night to
-              nights available. Each point is a single listing with color
-              representing the performance score (lighter colors = higher
-              scores). Since high-performing listings should have higher prices
-              and be booked more often—lower availability—we expect
-              lighter-colored points to appear in the lower-right region.
-              That&apos;s exactly what the chart shows: listings with lower
-              availability and higher prices are clustered in the bottom-right
-              and are lighter in color, while the darker-colored listings (lower
-              scores) are mostly in the upper-left, where availability is high
-              and price is low. This confirms that our scoring method aligns
-              well with our definition of performance and reflects patterns in
-              the actual data.
-            </p>
-            <div class="plot">
-              <div id="plot-price-score-scatter"></div>
-            </div>
-          </div>
-
-          <div class="figure">
-            <h3>Average Review Ratings by Performance Tier</h3>
-            <p style="font-size: 1.25rem">
-              Performance Tiers by score:
-              <span style="color: #2ca02c">High (80-100)</span>,
-              <span style="color: #ff7f0e">Medium (50-79)</span>,
-              <span style="color: #d62728">Low (0-49)</span>
-            </p>
-            <p>
-              This bar chart shows how guest ratings differ across high, medium,
-              and low performing Airbnbs, these tiers are determined by our
-              calculated performance score. Each bar represents the average
-              rating in a specific category like cleanliness, communication, or
-              value. Listings in the high-performance tier consistently have
-              higher ratings across all categories, while medium and low tier
-              listings show slightly lower scores. This pattern helps confirm
-              that our performance score is working as intended. It&apos;s not
-              just based on price and availability, but also generally lines up
-              with how satisfied guests are. Even though the differences in
-              ratings are small, since most listings are rated pretty highly,
-              the trend is clear: better-performing listings correlate with
-              higher review scores in all categories.
-            </p>
-            <div class="interactive">
-              <div class="interactive-header">
-                <img
-                  src="images/interactive-icon.svg"
-                  class="interactive-icon"
-                />
-                <h4 class="interactive-title">Interactive Visualization</h4>
-              </div>
-              <p class="interactive-description">
-                Click on any bar to highlight that review category across all
-                performance tiers. This lets you easily compare how categories
-                like Cleanliness, Communication, or Check-in are rated for high,
-                medium, and low-performing listings.
-              </p>
-            </div>
-            <div class="plot">
-              <div id="plot-performance-tier-reviews"></div>
-            </div>
-          </div>
-
-          <div class="figure">
-            <h3>Performance Score Distribution by Amenity Type</h3>
-            <p>
-              The chart showing the performance score distribution for each
-              amenity type reveals that the median performance scores for most
-              amenities cluster around the 50th percentile. This suggests that
-              many amenities are common across Airbnb listings and therefore do
-              not significantly differentiate high-performing properties.
-              Notably, amenities such as
-              <em>Scenic View</em> and <em>Family Friendly</em> exhibit a
-              slightly higher median score of ~55%, indicating these amenities
-              may contribute more positively to performance. On the other hand,
-              widely available amenities like <em>Essentials</em>,
-              <em>Kitchen</em>, and <em>Connectivity</em> show similar
-              distributions. While these kinds of amenities are necessary, they
-              are not significant enough to drive higher performance. This
-              analysis suggests that while basic amenities are foundational, it
-              is the more unique or desirable features—like scenic views or
-              family-oriented setups—that may help increase a listing&apos;s
-              success.
-            </p>
-            <div class="interactive">
-              <div class="interactive-header">
-                <img
-                  src="images/interactive-icon.svg"
-                  class="interactive-icon"
-                />
-                <h4 class="interactive-title">Interactive Visualization</h4>
-              </div>
-              <p class="interactive-description">
-                Click on any amenity type on the left to highlight its
-                performance score in the chart. You can select multiple
-                amenities to compare them side by side. Use the room type
-                options at the bottom to filter the data by specific types of
-                listings, like private rooms or entire homes.
-              </p>
-            </div>
-            <div class="plot">
-              <div id="plot-amenity-boxplot"></div>
-            </div>
-          </div>
-
-          <div class="figure">
             <h3>Airbnb Performance Score Map in the Bay Area</h3>
             <p>
               This interactive map offers a geographical perspective on Airbnb
@@ -258,6 +131,125 @@
               >
               </iframe>
             </div>
+          </div>
+        </div>
+
+        <div class="figure">
+          <h3>Relationship Between Room Type and Price</h3>
+          <p>
+            The box plot shows that Entire home/apartment listings dominate the
+            higher price range, with many exceeding $1000 and some nearing
+            $2800, and display the widest variation, reflecting diverse property
+            types. Their median price falls between $200 and $300. Hotel rooms
+            have a tighter, more consistent price range, mostly between $250 and
+            $750. Private rooms are typically under $200 but can occasionally
+            reach $1000, indicating a few premium options. Shared rooms are the
+            most affordable and consistent, clustering below $100, appealing to
+            budget-conscious travelers.
+          </p>
+
+          <div class="plot">
+            <div id="plot-room-type-price"></div>
+          </div>
+        </div>
+
+        <div class="figure">
+          <h3>Validating Performance Score Using Price and Availability</h3>
+          <p>
+            This scatter plot is used to validate that our performance score
+            accurately reflects listing success by related price per night to
+            nights available. Each point is a single listing with color
+            representing the performance score. Since high-performing listings
+            should have higher prices and be booked more often—lower
+            availability—we expect dark red colored points to appear in the
+            lower-right region. That&apos;s exactly what the chart shows:
+            listings with lower availability and higher prices are clustered in
+            the bottom-right and are darker in color, while the lighter,
+            yellow-colored listings (lower scores) are mostly in the upper-left,
+            where availability is high and price is low. This confirms that our
+            scoring method aligns well with our definition of performance and
+            reflects patterns in the actual data.
+          </p>
+          <div class="plot">
+            <div id="plot-price-score-scatter"></div>
+          </div>
+        </div>
+
+        <div class="figure">
+          <h3>Average Review Ratings by Performance Tier</h3>
+          <p style="font-size: 1.25rem">
+            Performance Tiers by score:
+            <span style="color: #2ca02c">High (80-100)</span>,
+            <span style="color: #ff7f0e">Medium (50-79)</span>,
+            <span style="color: #d62728">Low (0-49)</span>
+          </p>
+          <p>
+            This bar chart shows how guest ratings differ across high, medium,
+            and low performing Airbnbs, these tiers are determined by our
+            calculated performance score. Each bar represents the average rating
+            in a specific category like cleanliness, communication, or value.
+            Listings in the high-performance tier consistently have higher
+            ratings across all categories, while medium and low tier listings
+            show slightly lower scores. This pattern helps confirm that our
+            performance score is working as intended. It&apos;s not just based
+            on price and availability, but also generally lines up with how
+            satisfied guests are. Even though the differences in ratings are
+            small, since most listings are rated pretty highly, the trend is
+            clear: better-performing listings correlate with higher review
+            scores in all categories.
+          </p>
+          <div class="interactive">
+            <div class="interactive-header">
+              <img src="images/interactive-icon.svg" class="interactive-icon" />
+              <h4 class="interactive-title">Interactive Visualization</h4>
+            </div>
+            <p class="interactive-description">
+              Click on any bar to highlight that review category across all
+              performance tiers. This lets you easily compare how categories
+              like Cleanliness, Communication, or Check-in are rated for high,
+              medium, and low-performing listings.
+            </p>
+          </div>
+          <div class="plot">
+            <div id="plot-performance-tier-reviews"></div>
+          </div>
+        </div>
+
+        <div class="figure">
+          <h3>Performance Score Distribution by Amenity Type</h3>
+          <p>
+            The chart showing the performance score distribution for each
+            amenity type reveals that the median performance scores for most
+            amenities cluster around the 50th percentile. This suggests that
+            many amenities are common across Airbnb listings and therefore do
+            not significantly differentiate high-performing properties. Notably,
+            amenities such as
+            <em>Scenic View</em> and <em>Family Friendly</em> exhibit a slightly
+            higher median score of ~55%, indicating these amenities may
+            contribute more positively to performance. On the other hand, widely
+            available amenities like <em>Essentials</em>, <em>Kitchen</em>, and
+            <em>Connectivity</em> show similar distributions. While these kinds
+            of amenities are necessary, they are not significant enough to drive
+            higher performance. This analysis suggests that while basic
+            amenities are foundational, it is the more unique or desirable
+            features—like scenic views or family-oriented setups—that may help
+            increase a listing&apos;s success.
+          </p>
+          <div class="interactive">
+            <div class="interactive-header">
+              <img src="images/interactive-icon.svg" class="interactive-icon" />
+              <h4 class="interactive-title">Interactive Visualization</h4>
+            </div>
+            <p class="interactive-description">
+              Click on any amenity type on the left to highlight its performance
+              score in the chart. You can select multiple amenities to compare
+              them side by side. Use the room type options at the bottom to
+              filter the data by specific types of listings, like private rooms
+              or entire homes.
+            </p>
+          </div>
+          <div class="plot">
+            <div id="plot-amenity-boxplot"></div>
           </div>
         </div>
 
