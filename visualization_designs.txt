@@ -8,7 +8,20 @@ Published Website URL: https://jacksonlw.github.io/scc-airbnb-analysis/
 
 3. Validating Performance Score Using Price and Availability (Scatter Plot)
 
+This scatter plot uses dots as marks to represent individual Airbnb listings. The x-axis shows the price per night (USD), and the y-axis shows the availability over the next year, meaning how many days the listing is available. Color is used as a channel to represent each listing’s performance score with lighter yellow indicating lower performance and dark red showing higher performance. We use red to keep the Airbnb theme consistent across the website. This sequential color scheme is explained in the legend at the top.
+
 4. Average Review Ratings by Performance Tier (Bar Plot)
 
+This bar chart uses horizontal bars to show the average review ratings across different performance tiers. The y-axis lists review categories like Accuracy and Location, while the x-axis shows the average rating on a scale from 4.5 to 5. Color is used as a channel to represent the performance tier—green for High, orange for Medium, and red for Low. These colors are intentionally chosen to show how well a listing performs, with green signaling better performance and red signaling worse performance. The interaction allows users to highlight specific review categories across all performance tiers, improving comparison capabilities.
+
 5. Performance Score Distribution by Amenity Type (Box Plot)
+
+This side-by-side box plot shows the distribution of performance scores for different Airbnb amenity types. Each box represents a different amenity type and shows the spread of performance scores. Color is used as a channel to show which amenity group each box belongs to, such as Outdoor & Safety or Comfort & Tech. There’s interactive selection boxes on the left where you can select one-to-many amenity groups. Groups that are not selected will fade on the box plot, making it easy for users to compare groups they are interested in.
+
+
+
+
+
+
+
 
