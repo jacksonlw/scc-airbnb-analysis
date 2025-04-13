@@ -5,6 +5,15 @@ Published Website URL: https://jacksonlw.github.io/scc-airbnb-analysis/
 1. Airbnb Performance Score Map in the Bay Area (Map)
 
 2. Relationship Between Room Type and Price (Box Plot)
+The box plot plays a crucial role in setting the stage for this performance 
+score calculation by visually highlighting how pricing varies across different 
+room types. It reveals the extent of variation, median price points, and the 
+presence of outliers, allowing us to see, for example, that Entire home/apartment 
+listings span a much broader price range than Shared or Private rooms. However, 
+we want to be able to see how similar housing types compare to other housing types 
+in the same category, such that we can see the best performing airbnbs across all 
+categories instead of the priciest one. Hence, we created a performance_score variable 
+that will be used in the following visualizations. 
 
 3. Validating Performance Score Using Price and Availability (Scatter Plot)
 

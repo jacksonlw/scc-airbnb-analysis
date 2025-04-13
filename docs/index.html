@@ -33,14 +33,25 @@
         <p>
           We are using data from InsideAirbnb, a project with a mission to
           provide data and induce advocacy about Airbnb&apos;s impact on
-          residential communities. Although the data is already cleaned,
-          verified, analyzed, and aggregated, we performed additional data
+          residential communities. The features we used were primarily listing features, 
+          which were various characteristics about the airbnb itself. Some examples were 
+          room type, price, and amenities to name a few. Another category of features 
+          were host features, which had host since, which gives insight into host 
+          experience. Another category of features were Location, which had latitude 
+          & longitude, which we used for our map where we plotted all the airbnb 
+          listings. We also had features that described availability with availability_30,60,90,365 
+          and has_availability. Lastly, we also had a reviews & ratings category, 
+          which had a number of reviews and review score to name a few. Although 
+          the data is already cleaned, verified, analyzed, and aggregated, we performed additional data
           cleaning to ensure we analyzed the data relevant to our hypothesis. We
           created a “performance_score” variable to represent the combined
-          effect of price competitiveness and availability, allowing us to
-          compare listings within the same room type on a standardized scale.
-          Furthermore, we eliminated outliers and incomplete entries to
-          guarantee that the dataset was clean, uniform, and suitable for
+          effect of price competitiveness and availability. For each listing, we ranked 
+          its price within its room type using percentiles. The same thing was done for 
+          the listing&apos;s availability. Afterwards, we then inverted this score by subtracting 
+          it from 100-so listings with fewer available days received a higher score. Then, 
+          the average of the price percentile and the inverted availability score were taken 
+          and put into a final performance score. Furthermore, we eliminated outliers and 
+          incomplete entries to guarantee that the dataset was clean, uniform, and suitable for
           analysis. The size of the data is 4,600, as we will be reviewing 4,600
           Airbnb listings. The data includes a mix of categorical, numerical,
           and continuous values. This data can be found in other research
