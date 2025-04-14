@@ -3,6 +3,7 @@ Explanation of Visualization Designs
 Published Website URL: https://jacksonlw.github.io/scc-airbnb-analysis/
 
 1. Airbnb Performance Score Map in the Bay Area (Map)
+This interactive score map uses a geospatial approach to plot Airbnb listings across the Bay Area and communicate their performance scores. Using geopandas, we visualized a sequential colormap ranging from light yellow to deep red—to intuitively indicate performance variation. Through a color-mapping process, lighter hues signal lower scores while darker reds highlight high-performing listings to make spatial patterns stand out. Users can hover over individual listings to view key metrics such as name, performance score, review rating, and number of reviews, enhancing interactivity and contextual understanding. The map also includes zoom and pan functionality, allowing for detailed exploration of neighborhoods. For instance, users can easily identify clusters of high-performing listings in areas like Palo Alto, and contrast them with lower-performing areas such as East San Jose. The map is embedded cleanly within the webpage using a simple title and minimal styling, ensuring that the data remains the focal point. A legend is also attached for ease of understanding. 
 
 2. Relationship Between Room Type and Price (Box Plot)
 The box plot plays a crucial role in setting the stage for this performance 
